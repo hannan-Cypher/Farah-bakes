@@ -1,0 +1,87 @@
+.section {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+}
+
+.bgImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.circles {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  z-index: 2;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-gold);
+  box-shadow: 0 0 40px rgba(200, 169, 94, 0.3), 0 10px 40px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circleLeft {
+  margin-top: -60px;
+}
+
+.circleRight {
+  margin-top: 60px;
+  width: 180px;
+  height: 180px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circleRight {
+    width: 110px;
+    height: 110px;
+  }
+
+  .circles {
+    gap: var(--space-xl);
+  }
+}

@@ -1,0 +1,142 @@
+.section {
+  padding: var(--space-5xl) 0;
+  background: var(--color-cream-light);
+}
+
+.grid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 320px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.cardImage {
+  position: absolute;
+  inset: 0;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(45, 24, 16, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  font-style: italic;
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.cardBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badgeGold {
+  background: var(--color-gold);
+  color: var(--color-brown-dark);
+}
+
+.badgeOutline {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.cardSubtext {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Middle floating badge */
+.middleBadge {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-brown-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  z-index: 3;
+  box-shadow: var(--shadow-lg);
+}
+
+.middleBadgeText {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.middleBadgeValue {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 260px;
+  }
+
+  .middleBadge {
+    display: none;
+  }
+}
