@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/farah-bakes",
+  basePath: "/Farah-bakes",
   images: {
-    unoptimized: true,
+    loader: "custom",
+    loaderFile: "./src/image-loader.ts",
   },
 };
 
