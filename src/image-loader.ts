@@ -5,7 +5,13 @@ export default function customImageLoader({
   width: number;
   quality?: number;
 }) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/Farah-bakes";
+  const isGithubPages =
+    process.env.GITHUB_ACTIONS === "true" ||
+    process.env.GITHUB_PAGES === "true" ||
+    process.env.NEXT_PUBLIC_GITHUB_PAGES === "true";
+
+  const basePath = isGithubPages ? "/Farah-bakes" : "";
+
   if (src.startsWith("http://") || src.startsWith("https://")) {
     return src;
   }
