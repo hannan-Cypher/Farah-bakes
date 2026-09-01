@@ -5,14 +5,18 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import styles from "./HowItStarted.module.css";
 
-export default function HowItStarted() {
+interface HowItStartedProps {
+  onOpenInquiry?: () => void;
+}
+
+export default function HowItStarted({ onOpenInquiry }: HowItStartedProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section className={styles.section} id="story" ref={ref}>
       <div className={styles.content}>
-        {/* Left Image - Founder */}
+        {/* Left Image - Artisanal Kitchen & Prep */}
         <motion.div
           className={styles.leftImage}
           initial={{ opacity: 0, x: -60 }}
@@ -20,8 +24,8 @@ export default function HowItStarted() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/founder.jpg"
-            alt="Michette bakery founder"
+            src="/images/final/IMG_1587_copy.jpg"
+            alt="Artisanal kitchen baking knife and prep surface"
             fill
             sizes="(max-width: 968px) 100vw, 33vw"
             style={{ objectFit: "cover" }}
@@ -37,7 +41,7 @@ export default function HowItStarted() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Who we are
+            OUR HERITAGE &amp; PASSION
           </motion.p>
 
           <motion.h2
@@ -46,7 +50,7 @@ export default function HowItStarted() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            How it started
+            The Farah Bakes Story
           </motion.h2>
 
           <motion.div
@@ -64,10 +68,7 @@ export default function HowItStarted() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.5 }}
           >
-            While Michette officially launched in 2022, the journey started back
-            in 2018 when Thomas, who&apos;d been a lawyer in New York for five
-            years, went back for an internship at his hometown boulangerie in
-            France and fell in love with baking.
+            Farah Bakes was born from a deep devotion to classical pastry craft, comfort, and uncompromising luxury. We combine slow-fermented organic sourdoughs with intricately decorated celebration cakes that bring people together.
           </motion.p>
 
           <motion.p
@@ -76,8 +77,7 @@ export default function HowItStarted() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.6 }}
           >
-            He swapped the business suits for baking sheets and set out on a
-            mission to make the everyday staple a daily delight.
+            Every single batch is baked fresh each morning in our Brand Green kitchen using pure organic butter, Madagascar vanilla, and single-origin chocolate.
           </motion.p>
 
           <motion.div
@@ -85,18 +85,18 @@ export default function HowItStarted() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.7 }}
           >
-            <motion.a
-              href="#"
+            <motion.button
               className="btn btn-primary"
+              onClick={onOpenInquiry}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Learn More
-            </motion.a>
+              Discuss a Custom Cake
+            </motion.button>
           </motion.div>
         </div>
 
-        {/* Right Image - Bakery */}
+        {/* Right Image - Wooden Baking Surface */}
         <motion.div
           className={styles.rightImage}
           initial={{ opacity: 0, x: 60 }}
@@ -104,8 +104,8 @@ export default function HowItStarted() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/bakery-workspace.jpg"
-            alt="Artisanal bakery workspace"
+            src="/images/final/IMG_1590_copy.jpg"
+            alt="Handcrafted baking process on wooden bench"
             fill
             sizes="(max-width: 968px) 100vw, 33vw"
             style={{ objectFit: "cover" }}
@@ -116,3 +116,4 @@ export default function HowItStarted() {
     </section>
   );
 }
+

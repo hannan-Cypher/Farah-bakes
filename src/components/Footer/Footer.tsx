@@ -4,15 +4,19 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./Footer.module.css";
 
-const payments = ["Apple Pay", "GPay", "Visa", "MC", "Amex", "Disc", "JCB", "Shop", "PayPal"];
+const payments = ["Apple Pay", "GPay", "Visa", "MC", "Amex", "Discover", "PayPal"];
 
-export default function Footer() {
+interface FooterProps {
+  onOpenInquiry?: () => void;
+}
+
+export default function Footer({ onOpenInquiry }: FooterProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <footer className={styles.footer} ref={ref}>
-      {/* Curved Dark Top */}
+      {/* Curved Top Logo Badge */}
       <div className={styles.curvedTop}>
         <motion.div
           className={styles.logoCenter}
@@ -33,7 +37,8 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3>Get The Freshest Updates</h3>
+            <h3>Subscribe to Farah Bakes VIP</h3>
+            <p className={styles.newsletterSub}>Be the first to hear about seasonal cake drops &amp; exclusive tasting popups.</p>
             <div className={styles.formRow}>
               <div className={styles.inputGroup}>
                 <label>Name</label>
@@ -41,7 +46,7 @@ export default function Footer() {
               </div>
               <div className={styles.inputGroup}>
                 <label>Email</label>
-                <input type="email" placeholder="Your E-Mail" />
+                <input type="email" placeholder="Your Email" />
               </div>
             </div>
             <motion.button
@@ -53,33 +58,34 @@ export default function Footer() {
             </motion.button>
           </motion.div>
 
-          {/* Inquiries */}
+          {/* Quick Links */}
           <motion.div
             className={styles.column}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4>Inquiries</h4>
+            <h4>Farah Bakes</h4>
             <ul>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#menu">Featured Menu</a></li>
+              <li><a href="#packaging">Luxury Packaging</a></li>
+              <li><a href="#story">Our Heritage</a></li>
+              <li><button onClick={onOpenInquiry} className={styles.linkBtn}>Custom Order Request</button></li>
             </ul>
           </motion.div>
 
-          {/* About Us */}
+          {/* Bakery Hours */}
           <motion.div
             className={styles.column}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h4>About Us</h4>
-            <ul>
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Order Now</a></li>
+            <h4>Baking Hours</h4>
+            <ul className={styles.hoursList}>
+              <li><span>Tue - Fri:</span> 7:30 AM - 6:00 PM</li>
+              <li><span>Sat - Sun:</span> 8:00 AM - 5:00 PM</li>
+              <li><span>Monday:</span> Closed for Baking</li>
             </ul>
           </motion.div>
 
@@ -90,18 +96,18 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h4>Social Media</h4>
+            <h4>Social &amp; Inquiries</h4>
             <ul>
               <li>
-                <a href="#" className={styles.socialLink}>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                   <span className={`${styles.socialIcon} ${styles.iconIg}`}>IG</span>
-                  Instagram
+                  @FarahBakes
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.socialLink}>
-                  <span className={`${styles.socialIcon} ${styles.iconFb}`}>FB</span>
-                  Facebook
+                <a href="mailto:hello@farahbakes.com" className={styles.socialLink}>
+                  <span className={`${styles.socialIcon} ${styles.iconFb}`}>@</span>
+                  hello@farahbakes.com
                 </a>
               </li>
             </ul>
@@ -124,10 +130,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className={styles.copyright}>
-          <p>© 2022-24 Michette Llc All Rights Reserved</p>
+          <p>© 2024 Farah Bakes LLC. All Rights Reserved.</p>
           <div className={styles.legalLinks}>
             <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Cookies</a>
             <a href="#">Privacy Policy</a>
           </div>
         </div>
@@ -135,3 +140,4 @@ export default function Footer() {
     </footer>
   );
 }
+

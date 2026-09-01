@@ -139,20 +139,35 @@
   margin-bottom: var(--space-lg);
 }
 
-.column ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.column li a {
+.newsletterSub {
   color: var(--color-text-muted);
   font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.linkBtn {
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  padding: 0;
+  text-align: left;
   transition: color var(--transition-fast);
 }
 
-.column li a:hover {
+.linkBtn:hover {
+  color: var(--color-gold-light);
+  text-decoration: underline;
+}
+
+.hoursList li {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.hoursList span {
   color: var(--color-gold);
+  font-weight: 600;
+  display: inline-block;
+  min-width: 80px;
 }
 
 .socialLink {

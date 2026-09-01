@@ -20,8 +20,8 @@ export default function BakeryBanner() {
     <section className={styles.section} ref={ref}>
       <motion.div className={styles.bgImage} style={{ y: bgY }}>
         <Image
-          src="/images/bakery-banner.jpg"
-          alt="Basket of freshly baked pastries"
+          src="/images/final/IMG_1574_copy.jpg"
+          alt="Farah Bakes signature cake spread"
           fill
           sizes="100vw"
           style={{ objectFit: "cover" }}
@@ -39,10 +39,11 @@ export default function BakeryBanner() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/cannele.jpg"
-            alt="Cannelé pastry"
+            src="/images/final/IMG_1516_copy.jpg"
+            alt="Farah Bakes celebration cake"
             width={200}
             height={200}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </motion.div>
 
@@ -53,13 +54,15 @@ export default function BakeryBanner() {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            src="/images/cardamom-bun.jpg"
-            alt="Cardamom bun"
+            src="/images/final/IMG_1481.jpg"
+            alt="Double chocolate cookie"
             width={180}
             height={180}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         </motion.div>
       </div>
     </section>
   );
 }
+

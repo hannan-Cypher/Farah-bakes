@@ -4,7 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.css";
 
-export default function Navbar() {
+interface NavbarProps {
+  onOpenInquiry?: () => void;
+}
+
+export default function Navbar({ onOpenInquiry }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -32,21 +36,32 @@ export default function Navbar() {
       >
         <a href="#" className={styles.logo}>
           <div className={styles.logoIcon}>FB</div>
+          <div className={styles.logoTextGroup}>
+            <span className={styles.brandTitle}>FARAH BAKES</span>
+            <span className={styles.brandSubtitle}>ARTISANAL BAKERY</span>
+          </div>
         </a>
 
         <div className={styles.navLinks}>
           <a href="#menu" className={styles.navLink}>
-            Menu
+            Featured Menu
+          </a>
+          <a href="#packaging" className={styles.navLink}>
+            Luxury Packaging
           </a>
           <a href="#story" className={styles.navLink}>
             Our Story
+          </a>
+          <a href="#instagram" className={styles.navLink}>
+            Gallery
           </a>
           <motion.button
             className={styles.orderBtn}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={onOpenInquiry}
           >
-            Order Now
+            Custom Order
           </motion.button>
         </div>
 
@@ -78,7 +93,17 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              Menu
+              Featured Menu
+            </motion.a>
+            <motion.a
+              href="#packaging"
+              className={styles.mobileLink}
+              onClick={() => setMobileOpen(false)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              Luxury Packaging
             </motion.a>
             <motion.a
               href="#story"
@@ -91,18 +116,31 @@ export default function Navbar() {
               Our Story
             </motion.a>
             <motion.a
-              href="#"
+              href="#instagram"
               className={styles.mobileLink}
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 }}
+            >
+              Gallery
+            </motion.a>
+            <motion.button
+              className={styles.mobileOrderBtn}
+              onClick={() => {
+                setMobileOpen(false);
+                if (onOpenInquiry) onOpenInquiry();
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Order Now
-            </motion.a>
+              Custom Order Request
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
 }
+

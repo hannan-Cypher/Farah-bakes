@@ -19,7 +19,11 @@ const textVariants = {
   }),
 };
 
-export default function Hero() {
+interface HeroProps {
+  onOpenInquiry?: () => void;
+}
+
+export default function Hero({ onOpenInquiry }: HeroProps) {
   return (
     <section className={styles.hero} id="hero">
       {/* Organic background shapes */}
@@ -52,43 +56,61 @@ export default function Hero() {
 
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
-          <motion.h1
-            className={styles.heroTitle}
+          <motion.div
+            className={styles.heroBadge}
             custom={0}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
-            Sourdough, Pastries
-            <br />
-            And Good Vibes
-          </motion.h1>
+            FARAH BAKES • EST. 2024
+          </motion.div>
 
-          <motion.p
-            className={styles.heroDesc}
+          <motion.h1
+            className={styles.heroTitle}
             custom={1}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
-            Michette is an artisanal French bakery. We are now open at 164
-            Broadway in Somerville!
-          </motion.p>
+            Comfort, Freshness
+            <br />
+            <span className={styles.goldText}>&amp; Luxury Elegance</span>
+          </motion.h1>
 
-          <motion.div
+          <motion.p
+            className={styles.heroDesc}
             custom={2}
             initial="hidden"
             animate="visible"
             variants={textVariants}
           >
+            Farah Bakes crafts handcrafted custom cakes, gourmet pastries, sourdough, and sweet delicacies using 100% organic ingredients and timeless artisan techniques.
+          </motion.p>
+
+          <motion.div
+            className={styles.heroButtons}
+            custom={3}
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+          >
             <motion.a
-              href="#featured"
-              className="btn btn-outline"
+              href="#menu"
+              className="btn btn-gold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Discover More
+              Explore Menu
             </motion.a>
+            <motion.button
+              className="btn btn-outline"
+              onClick={onOpenInquiry}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Custom Cake Request
+            </motion.button>
           </motion.div>
         </div>
 
@@ -105,13 +127,19 @@ export default function Hero() {
           >
             <div className={styles.goldRing} />
             <Image
-              src="/images/hero-croissant.jpg"
-              alt="Fresh croissant being dusted with powdered sugar"
-              width={420}
-              height={420}
+              src="/images/final/IMG_1516_copy.jpg"
+              alt="Farah Bakes signature tiered cake on artisanal stand"
+              width={460}
+              height={460}
               priority
+              style={{ objectFit: "cover" }}
             />
           </motion.div>
+
+          <div className={styles.floatingBadge}>
+            <span className={styles.badgeNumber}>100%</span>
+            <span className={styles.badgeText}>Handcrafted</span>
+          </div>
         </motion.div>
       </div>
 
@@ -119,3 +147,4 @@ export default function Hero() {
     </section>
   );
 }
+

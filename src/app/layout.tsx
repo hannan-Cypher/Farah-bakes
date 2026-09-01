@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -10,7 +10,7 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -18,22 +18,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Michette | Artisanal French Bakery — Sourdough, Pastries & Good Vibes",
+  title: "Farah Bakes | Luxury Artisanal Bakery & Custom Cakes",
   description:
-    "Michette is an artisanal French bakery in Somerville. We craft sourdough, pastries, croissants, and baked goods using traditional boulangerie techniques. Now open at 164 Broadway.",
+    "Farah Bakes is a luxury artisanal bakery crafting custom cakes, gourmet pastries, sourdough, and handcrafted treats using premium organic ingredients.",
   keywords: [
-    "bakery",
-    "French bakery",
-    "artisanal",
-    "sourdough",
-    "croissant",
-    "pastries",
-    "Somerville",
+    "Farah Bakes",
+    "custom cakes",
+    "artisanal bakery",
+    "gourmet pastries",
+    "luxury bakery",
+    "wedding cakes",
+    "specialty coffee",
   ],
   openGraph: {
-    title: "Michette | Artisanal French Bakery",
+    title: "Farah Bakes | Luxury Artisanal Bakery & Custom Cakes",
     description:
-      "Sourdough, Pastries And Good Vibes. Artisanal French bakery now open at 164 Broadway in Somerville.",
+      "Farah Bakes — Comfort, Freshness & Elegance. Fresh sourdough, luxury custom cakes, and artisanal pastries baked daily.",
     type: "website",
   },
 };
@@ -45,9 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${inter.variable}`}>
+      <body className={`${playfair.variable} ${montserrat.variable}`}>
         {children}
       </body>
     </html>
   );
 }
+

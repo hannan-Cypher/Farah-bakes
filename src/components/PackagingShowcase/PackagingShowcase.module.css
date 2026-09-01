@@ -1,0 +1,132 @@
+.section {
+  padding: var(--space-5xl) 0;
+  background: var(--color-green-deep);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: var(--space-3xl);
+}
+
+.textContent {
+  max-width: 540px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+  background: rgba(210, 174, 109, 0.12);
+  border: 1px solid rgba(210, 174, 109, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.codeColor {
+  color: var(--color-gold);
+  background: rgba(210, 174, 109, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.goldCheck {
+  color: var(--color-gold);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.visualGroup {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.mainImg {
+  height: 380px;
+}
+
+.subImg {
+  height: 300px;
+  transform: translateY(-30px);
+}
+
+.imgLabel {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(13, 23, 21, 0.8);
+  backdrop-filter: blur(8px);
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 12px;
+}
+
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .visualGroup {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .subImg {
+    transform: none;
+    height: 260px;
+  }
+}

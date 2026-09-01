@@ -6,19 +6,19 @@ import styles from "./Values.module.css";
 
 const values = [
   {
-    icon: "🍞",
-    title: "Sourdough Focus",
-    desc: "We're obsessed by how levain and multi-day fermentation yield deeper flavors, more nutritious loaves.",
+    icon: "🎂",
+    title: "Custom Artistry",
+    desc: "Every custom cake is meticulously designed to reflect your celebration's unique theme and taste.",
   },
   {
-    icon: "🥐",
-    title: "A Fresh Take",
-    desc: "We're re-inventing classics — always experimenting with new and seasonal flavors.",
+    icon: "🌾",
+    title: "100% Organic",
+    desc: "We select pure organic flour, French butter, and single-origin cacao for unforgettable flavor.",
   },
   {
     icon: "👨‍🍳",
-    title: "Artisanal Techniques",
-    desc: "Our approach to breadmaking is rooted in French boulangerie techniques and savoir-faire.",
+    title: "Artisanal Craft",
+    desc: "Slow fermentation, hand-piped frosting, and traditional French techniques in every bite.",
   },
 ];
 

@@ -12,10 +12,11 @@
 }
 
 .navbar.scrolled {
-  background: rgba(26, 58, 42, 0.95);
+  background: rgba(31, 55, 50, 0.96);
   backdrop-filter: blur(20px);
   padding: 12px 40px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(210, 174, 109, 0.2);
 }
 
 .logo {
@@ -26,8 +27,8 @@
 }
 
 .logoIcon {
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background: var(--color-green-deep);
   border: 2px solid var(--color-gold);
@@ -39,12 +40,30 @@
   font-size: 1rem;
   font-weight: 700;
   font-style: italic;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.navbar.scrolled .logoIcon {
-  width: 40px;
-  height: 40px;
-  font-size: 0.85rem;
+.logoTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.brandSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: #E5C78E;
+  margin-top: 3px;
+  text-transform: uppercase;
 }
 
 .navLinks {
@@ -155,6 +174,18 @@
 
 .mobileLink:hover {
   color: var(--color-gold);
+}
+
+.mobileOrderBtn {
+  background: var(--color-gold);
+  color: var(--color-green-deep);
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
