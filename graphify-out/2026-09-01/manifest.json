@@ -1,0 +1,692 @@
+{
+  "eslint.config.mjs": {
+    "mtime": 1788209718.501031,
+    "seen": 1788261618.03274,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": ""
+  },
+  "next.config.ts": {
+    "mtime": 1788261460.5315094,
+    "seen": 1788261618.032746,
+    "ast_hash": "9933776886d148ea239a86796bb4038a",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1788261601.1226985,
+    "seen": 1788261618.0327501,
+    "ast_hash": "7419800e6abb3abf03c8c5d6532882ec",
+    "semantic_hash": ""
+  },
+  "src/app/layout.tsx": {
+    "mtime": 1788254150.936772,
+    "seen": 1788261618.032752,
+    "ast_hash": "e420c37e11ed06ba3322f69d4c887e9d",
+    "semantic_hash": ""
+  },
+  "src/app/page.tsx": {
+    "mtime": 1788256296.3089283,
+    "seen": 1788261618.032753,
+    "ast_hash": "c57db1c1ee1addf05aaf74c0591c0a82",
+    "semantic_hash": ""
+  },
+  "src/components/ArtisanalMenu/ArtisanalMenu.tsx": {
+    "mtime": 1788257219.3326986,
+    "seen": 1788261618.032755,
+    "ast_hash": "a721877b435c1a50b7c1de21476476bd",
+    "semantic_hash": ""
+  },
+  "src/components/BakeryBanner/BakeryBanner.tsx": {
+    "mtime": 1788254354.1495078,
+    "seen": 1788261618.0327559,
+    "ast_hash": "b078196ade5e2b889db35f7010c012c2",
+    "semantic_hash": ""
+  },
+  "src/components/CustomOrderModal/CustomOrderModal.tsx": {
+    "mtime": 1788254576.224367,
+    "seen": 1788261618.032758,
+    "ast_hash": "71bdfcff8315b3ad6557eda062cf237f",
+    "semantic_hash": ""
+  },
+  "src/components/FeaturedItems/FeaturedItems.tsx": {
+    "mtime": 1788256505.0392058,
+    "seen": 1788261618.032759,
+    "ast_hash": "e63b0eb9b46251425f6b258e4132103c",
+    "semantic_hash": ""
+  },
+  "src/components/Footer/Footer.tsx": {
+    "mtime": 1788256266.2427104,
+    "seen": 1788261618.032761,
+    "ast_hash": "6c2913c22e616886e952972eaa8a761d",
+    "semantic_hash": ""
+  },
+  "src/components/Hero/Hero.tsx": {
+    "mtime": 1788256629.1955767,
+    "seen": 1788261618.032762,
+    "ast_hash": "c5df78f29e6c6f4690ffdd1372c7bdda",
+    "semantic_hash": ""
+  },
+  "src/components/HowItStarted/HowItStarted.tsx": {
+    "mtime": 1788256557.8833623,
+    "seen": 1788261618.032764,
+    "ast_hash": "0a0706e7f5ee76e1096778b737e83fd1",
+    "semantic_hash": ""
+  },
+  "src/components/InstagramFeed/InstagramFeed.tsx": {
+    "mtime": 1788256581.061565,
+    "seen": 1788261618.032765,
+    "ast_hash": "ca0ff39fb33142e039c2ecf374348460",
+    "semantic_hash": ""
+  },
+  "src/components/MenuFilter/MenuFilter.tsx": {
+    "mtime": 1788254223.9018989,
+    "seen": 1788261618.032767,
+    "ast_hash": "a19a8786ebe4cf47028bf2c464aa3f5e",
+    "semantic_hash": ""
+  },
+  "src/components/MorningRituals/MorningRituals.tsx": {
+    "mtime": 1788254491.8581204,
+    "seen": 1788261618.032768,
+    "ast_hash": "f3e2b0e7d14e174ca2b11fa4600c293d",
+    "semantic_hash": ""
+  },
+  "src/components/Navbar/FarahLogo.tsx": {
+    "mtime": 1788254356.3640623,
+    "seen": 1788261618.032769,
+    "ast_hash": "e9fabed4c47d36f101c4362670865601",
+    "semantic_hash": ""
+  },
+  "src/components/Navbar/Navbar.tsx": {
+    "mtime": 1788255696.898383,
+    "seen": 1788261618.032771,
+    "ast_hash": "bac880f4e53a96e6022ab588db9a9af6",
+    "semantic_hash": ""
+  },
+  "src/components/OrderInquiryModal/OrderInquiryModal.tsx": {
+    "mtime": 1788254297.5403016,
+    "seen": 1788261618.032772,
+    "ast_hash": "7b3711cce5d5cd5d32d86de4269964fa",
+    "semantic_hash": ""
+  },
+  "src/components/PackagingShowcase/PackagingShowcase.tsx": {
+    "mtime": 1788254531.7686045,
+    "seen": 1788261618.032773,
+    "ast_hash": "883313ee2ec87134f0d00fcf0f53d2c0",
+    "semantic_hash": ""
+  },
+  "src/components/Promotions/Promotions.tsx": {
+    "mtime": 1788256605.826321,
+    "seen": 1788261618.032775,
+    "ast_hash": "5f267f3c719f785447fcc7ed369efc71",
+    "semantic_hash": ""
+  },
+  "src/components/QuickViewModal/QuickViewModal.tsx": {
+    "mtime": 1788254238.3134031,
+    "seen": 1788261618.0327759,
+    "ast_hash": "a930d3fc7c2a7345f0efd8c61c45ca56",
+    "semantic_hash": ""
+  },
+  "src/components/Values/Values.tsx": {
+    "mtime": 1788256026.0911627,
+    "seen": 1788261618.032777,
+    "ast_hash": "ea12aa951a4da648297663936587221e",
+    "semantic_hash": ""
+  },
+  "src/image-loader.ts": {
+    "mtime": 1788261456.3192215,
+    "seen": 1788261618.032779,
+    "ast_hash": "41f87a1187109336a4f4946cf4bccf9b",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1788209718.504458,
+    "seen": 1788261618.0327811,
+    "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1788261482.5885804,
+    "seen": 1788261618.032782,
+    "ast_hash": "7c5cf2ed1a438d7a988cf3cb965dc5e0",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1788209802.0133622,
+    "seen": 1788261618.032783,
+    "ast_hash": "01e8142356e15c3404e0d84c48187cd0",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1788209802.013613,
+    "seen": 1788261618.032785,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788209718.500425,
+    "seen": 1788261618.032786,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": ""
+  },
+  "public/file.svg": {
+    "mtime": 1788209718.5004814,
+    "seen": 1788261618.032788,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "public/globe.svg": {
+    "mtime": 1788209718.5015354,
+    "seen": 1788261618.032789,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "public/images/almond-croissant.jpg": {
+    "mtime": 1788210320.4566867,
+    "seen": 1788261618.03279,
+    "ast_hash": "3df525886ab4bc3337257699797a2e5b",
+    "semantic_hash": ""
+  },
+  "public/images/baguette.jpg": {
+    "mtime": 1788210320.4126606,
+    "seen": 1788261618.032792,
+    "ast_hash": "33d731a09f581eaa6e3f7989018df7c9",
+    "semantic_hash": ""
+  },
+  "public/images/bakery-banner.jpg": {
+    "mtime": 1788210320.4364395,
+    "seen": 1788261618.032793,
+    "ast_hash": "b03e69dbeb7c2c20d5be09db89b0d263",
+    "semantic_hash": ""
+  },
+  "public/images/bakery-workspace.jpg": {
+    "mtime": 1788210320.4299965,
+    "seen": 1788261618.032795,
+    "ast_hash": "5532c9956a58a5503ce39e745791104b",
+    "semantic_hash": ""
+  },
+  "public/images/cannele.jpg": {
+    "mtime": 1788210320.3962643,
+    "seen": 1788261618.032796,
+    "ast_hash": "ccd4ddef82c9a24a3397ab722eb72623",
+    "semantic_hash": ""
+  },
+  "public/images/cardamom-bun.jpg": {
+    "mtime": 1788210320.443238,
+    "seen": 1788261618.032798,
+    "ast_hash": "b0722eebfebc8beae7d0a4cd6bc1dfad",
+    "semantic_hash": ""
+  },
+  "public/images/chocolate-cookie.jpg": {
+    "mtime": 1788210320.3894606,
+    "seen": 1788261618.032799,
+    "ast_hash": "e0f07f38c8b832e078c006fab8014143",
+    "semantic_hash": ""
+  },
+  "public/images/chocolate-croissant.jpg": {
+    "mtime": 1788210320.4496777,
+    "seen": 1788261618.0328,
+    "ast_hash": "f9bded35d592fb843387199282265067",
+    "semantic_hash": ""
+  },
+  "public/images/croissant-beurre.jpg": {
+    "mtime": 1788210320.403967,
+    "seen": 1788261618.032801,
+    "ast_hash": "acb1c15de784853c6c881189f30fd24f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/baking-sheet.jpg": {
+    "mtime": 1788254316.119861,
+    "seen": 1788261618.032803,
+    "ast_hash": "0916cc11ba48dc79b45b0e543d55fd50",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/cake-stand.jpg": {
+    "mtime": 1788254316.122461,
+    "seen": 1788261618.032804,
+    "ast_hash": "40a0863a044e46ff5b324d735a98d27f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/coffee-pair-1.jpg": {
+    "mtime": 1788254316.1209939,
+    "seen": 1788261618.032806,
+    "ast_hash": "9335479db28d9aab87d37d571f36bd38",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/coffee-pair-2.jpg": {
+    "mtime": 1788254316.1215198,
+    "seen": 1788261618.0328069,
+    "ast_hash": "a0a8bedb8b9f5723b69c19f0a5601a64",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/cookie-close-up.jpg": {
+    "mtime": 1788254316.1204813,
+    "seen": 1788261618.032809,
+    "ast_hash": "1f12c30e680126f47c449edb3edb694a",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/cookies-grid.jpg": {
+    "mtime": 1788254316.122986,
+    "seen": 1788261618.032811,
+    "ast_hash": "78aa46e42d8e93dd3107a285d1b5439c",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/green-box-1.jpg": {
+    "mtime": 1788254316.1188707,
+    "seen": 1788261618.032812,
+    "ast_hash": "41f29ef41058068ebe3bf8adc1aab54a",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/green-box-2.jpg": {
+    "mtime": 1788254316.119387,
+    "seen": 1788261618.032814,
+    "ast_hash": "8626aeb26b340cd6e655f6b088e8ed5c",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/hero-cloche.jpg": {
+    "mtime": 1788254316.1170025,
+    "seen": 1788261618.0328152,
+    "ast_hash": "77f203a6f6d86548d7a3de1dee1a8d0f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1481.jpg": {
+    "mtime": 1788254277.7985349,
+    "seen": 1788261618.0328162,
+    "ast_hash": "41f29ef41058068ebe3bf8adc1aab54a",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1491.jpg": {
+    "mtime": 1788254278.097108,
+    "seen": 1788261618.0328178,
+    "ast_hash": "8626aeb26b340cd6e655f6b088e8ed5c",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1491_a.jpg": {
+    "mtime": 1788254278.375035,
+    "seen": 1788261618.032819,
+    "ast_hash": "36a9bc9a3197befb1307aa9e439fbc31",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1495.jpg": {
+    "mtime": 1788254278.7402854,
+    "seen": 1788261618.03282,
+    "ast_hash": "82ff0c1cc68687097afb51656e7f9ba2",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1497.jpg": {
+    "mtime": 1788254278.9939017,
+    "seen": 1788261618.0328221,
+    "ast_hash": "e44844682a5a530c3b747115d88d1acb",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1510.jpg": {
+    "mtime": 1788254279.7500052,
+    "seen": 1788261618.032823,
+    "ast_hash": "78aa46e42d8e93dd3107a285d1b5439c",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1516.jpg": {
+    "mtime": 1788254280.1088269,
+    "seen": 1788261618.032825,
+    "ast_hash": "1f12c30e680126f47c449edb3edb694a",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1522.jpg": {
+    "mtime": 1788254280.3626823,
+    "seen": 1788261618.0328262,
+    "ast_hash": "4af164f719ee317c63e8be3e8f58521f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1532.jpg": {
+    "mtime": 1788254280.662361,
+    "seen": 1788261618.032827,
+    "ast_hash": "0916cc11ba48dc79b45b0e543d55fd50",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1534.jpg": {
+    "mtime": 1788254280.9636,
+    "seen": 1788261618.032829,
+    "ast_hash": "9659c1018e590f80a9dbd083d50c8271",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1543.jpg": {
+    "mtime": 1788254281.2111104,
+    "seen": 1788261618.03283,
+    "ast_hash": "f4a390a50868fbfd23aa63cd1cb6794b",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1544.jpg": {
+    "mtime": 1788254281.4606204,
+    "seen": 1788261618.032831,
+    "ast_hash": "40a0863a044e46ff5b324d735a98d27f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1544_a.jpg": {
+    "mtime": 1788254281.7126458,
+    "seen": 1788261618.032833,
+    "ast_hash": "cc799abd80cf5039a396fbdf69a20d76",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1545.jpg": {
+    "mtime": 1788254281.9654124,
+    "seen": 1788261618.032834,
+    "ast_hash": "67804934e12bc8aade380c0c7528ae7f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1547.jpg": {
+    "mtime": 1788254282.2170427,
+    "seen": 1788261618.0328362,
+    "ast_hash": "2c7cb017746b9f7351631f49cb379133",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1548.jpg": {
+    "mtime": 1788254282.465019,
+    "seen": 1788261618.0328372,
+    "ast_hash": "d2ab473b7df0787b8e75ff528afda95b",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1555.jpg": {
+    "mtime": 1788254282.722176,
+    "seen": 1788261618.0328379,
+    "ast_hash": "5d85f8e26be4988f98b69498f15802ae",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1560.jpg": {
+    "mtime": 1788254282.9678624,
+    "seen": 1788261618.03284,
+    "ast_hash": "e33e936643ccc2e71659168e6339245c",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1568.jpg": {
+    "mtime": 1788254283.212741,
+    "seen": 1788261618.032841,
+    "ast_hash": "98f4abcf83033a0e9ab021d64ddf9205",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1574.jpg": {
+    "mtime": 1788254283.461138,
+    "seen": 1788261618.032843,
+    "ast_hash": "9335479db28d9aab87d37d571f36bd38",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1580.jpg": {
+    "mtime": 1788254283.764948,
+    "seen": 1788261618.032844,
+    "ast_hash": "a0a8bedb8b9f5723b69c19f0a5601a64",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1587.jpg": {
+    "mtime": 1788254283.9976275,
+    "seen": 1788261618.032845,
+    "ast_hash": "d59985d89c9b547524083a9a818d67b9",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1590.jpg": {
+    "mtime": 1788254284.2428803,
+    "seen": 1788261618.0328472,
+    "ast_hash": "e3ec5eb36ced6625b3036fd4acb967b7",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1605.jpg": {
+    "mtime": 1788254284.5241296,
+    "seen": 1788261618.032848,
+    "ast_hash": "77f203a6f6d86548d7a3de1dee1a8d0f",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1618.jpg": {
+    "mtime": 1788254284.7750182,
+    "seen": 1788261618.0328488,
+    "ast_hash": "fd4d356732b7cf7cf36aac856161af57",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1621.jpg": {
+    "mtime": 1788254285.026462,
+    "seen": 1788261618.032851,
+    "ast_hash": "229250984826a1e6ed2315cb46c66ba0",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1630.jpg": {
+    "mtime": 1788254285.2692878,
+    "seen": 1788261618.032852,
+    "ast_hash": "091cf8aaf24b112d7740d82c0ca69a16",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/img_1633.jpg": {
+    "mtime": 1788254285.5774677,
+    "seen": 1788261618.032854,
+    "ast_hash": "ecd8303eb9136bd287cc79c6545ae615",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/morning-rituals.jpg": {
+    "mtime": 1788254316.117621,
+    "seen": 1788261618.032855,
+    "ast_hash": "98f4abcf83033a0e9ab021d64ddf9205",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/packaging-stack.jpg": {
+    "mtime": 1788254316.1219847,
+    "seen": 1788261618.032856,
+    "ast_hash": "82ff0c1cc68687097afb51656e7f9ba2",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/walnut-cake.jpg": {
+    "mtime": 1788254316.11829,
+    "seen": 1788261618.0328581,
+    "ast_hash": "f4a390a50868fbfd23aa63cd1cb6794b",
+    "semantic_hash": ""
+  },
+  "public/images/farah-bakes/wooden-sugar-spoon.png": {
+    "mtime": 1788257056.490562,
+    "seen": 1788261618.0328588,
+    "ast_hash": "df7bfd3d2b9b022f2d493b66cdff6a68",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1481.jpg": {
+    "mtime": 1788254135.1493423,
+    "seen": 1788261618.032861,
+    "ast_hash": "39083a869596dcbd1325fd880c866faa",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1491.jpg": {
+    "mtime": 1788254135.3678005,
+    "seen": 1788261618.032862,
+    "ast_hash": "748afbe088e05b94ceda9980853608ad",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1491a.jpg": {
+    "mtime": 1788254135.5831056,
+    "seen": 1788261618.032864,
+    "ast_hash": "a57b5b9e25779b162f57a19f4df34a8c",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1495_copy.jpg": {
+    "mtime": 1788254135.8679025,
+    "seen": 1788261618.032865,
+    "ast_hash": "efec651b11f4643a1ae9b4e047d7eb62",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1497_copy.jpg": {
+    "mtime": 1788254136.0882964,
+    "seen": 1788261618.032866,
+    "ast_hash": "c7236bb5dad12f6806e31d10d6b80412",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1510.jpg": {
+    "mtime": 1788254136.7141054,
+    "seen": 1788261618.0328681,
+    "ast_hash": "0ddd41a213d85feaded9a91762791d85",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1510_copy.jpg": {
+    "mtime": 1788254136.390279,
+    "seen": 1788261618.032871,
+    "ast_hash": "98e7f47d504e431ef2ec59d2c5c68cf5",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1516_copy.jpg": {
+    "mtime": 1788254136.9268355,
+    "seen": 1788261618.032872,
+    "ast_hash": "bb13be448323a961cd32caf7f57ca1ba",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1522_copy.jpg": {
+    "mtime": 1788254137.1546195,
+    "seen": 1788261618.0328739,
+    "ast_hash": "642361a36d9fcb6b8a4812b59052e559",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1532.jpg": {
+    "mtime": 1788254137.4603148,
+    "seen": 1788261618.032875,
+    "ast_hash": "62175946ad47f20c3647ec51d6371035",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1534_copy.jpg": {
+    "mtime": 1788254137.6737435,
+    "seen": 1788261618.032876,
+    "ast_hash": "5f178cc7f5afe0eeefdc3c59c0d33e11",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1543_copy.jpg": {
+    "mtime": 1788254137.896615,
+    "seen": 1788261618.0328782,
+    "ast_hash": "d9d4093d11a5efe3918366f658ad9eb6",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1544_copy.jpg": {
+    "mtime": 1788254138.1283228,
+    "seen": 1788261618.032879,
+    "ast_hash": "84c2043f4388418d136b35cac5a7a2dc",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1544a.jpg": {
+    "mtime": 1788254138.3918452,
+    "seen": 1788261618.03288,
+    "ast_hash": "3f2607434d011688b8ae0510fb0698f1",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1545_copy.jpg": {
+    "mtime": 1788254138.624814,
+    "seen": 1788261618.032882,
+    "ast_hash": "02dae489d9008e92eac9f473ac6dc797",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1547_copy.jpg": {
+    "mtime": 1788254138.854231,
+    "seen": 1788261618.032884,
+    "ast_hash": "a3e33c32d3a5957b70681e9169b8adb1",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1548_copy.jpg": {
+    "mtime": 1788254139.0881326,
+    "seen": 1788261618.032885,
+    "ast_hash": "b3b7f8cd389b487d80388275a5565e31",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1555_copy.jpg": {
+    "mtime": 1788254139.3225818,
+    "seen": 1788261618.032887,
+    "ast_hash": "27e395aa62072458d4e9e262238964df",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1560_copy.jpg": {
+    "mtime": 1788254139.552057,
+    "seen": 1788261618.0328882,
+    "ast_hash": "4ee517429c1775eceb47665f030303f8",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1568_copy.jpg": {
+    "mtime": 1788254139.7735102,
+    "seen": 1788261618.0328891,
+    "ast_hash": "0a533dbc728a04e62c0c95a8bd7f1fa3",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1574_copy.jpg": {
+    "mtime": 1788254139.99074,
+    "seen": 1788261618.0328908,
+    "ast_hash": "dc249d4520955e55d1c8cdafb0bd25c7",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1580_copy.jpg": {
+    "mtime": 1788254140.3325894,
+    "seen": 1788261618.032892,
+    "ast_hash": "d7329195484b24ed985b4719e0676acc",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1587_copy.jpg": {
+    "mtime": 1788254140.5500374,
+    "seen": 1788261618.032894,
+    "ast_hash": "1dfee9bb5f597bf8d796c04c0254d9b9",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1590_copy.jpg": {
+    "mtime": 1788254140.7870312,
+    "seen": 1788261618.032895,
+    "ast_hash": "d4f131c2d296a855c5b513e36e474f49",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1605_copy.jpg": {
+    "mtime": 1788254140.9990108,
+    "seen": 1788261618.032896,
+    "ast_hash": "606a762d25d6eecdef74ab6f66caa4b0",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1618_copy.jpg": {
+    "mtime": 1788254141.2456844,
+    "seen": 1788261618.032898,
+    "ast_hash": "28a44c749fe6717a9d0816edfe149766",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1621_copy.jpg": {
+    "mtime": 1788254141.474033,
+    "seen": 1788261618.0328991,
+    "ast_hash": "e1f97911a8adeea99dbe01adce9b72ad",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1630_copy.jpg": {
+    "mtime": 1788254141.7159705,
+    "seen": 1788261618.032901,
+    "ast_hash": "7ea4f978e86e2279c00b2b2e08a869f2",
+    "semantic_hash": ""
+  },
+  "public/images/final/IMG_1633_copy.jpg": {
+    "mtime": 1788254142.0516632,
+    "seen": 1788261618.032902,
+    "ast_hash": "7b76adb693a37619b9caaf6d40c9ee85",
+    "semantic_hash": ""
+  },
+  "public/images/founder.jpg": {
+    "mtime": 1788210320.4218545,
+    "seen": 1788261618.032903,
+    "ast_hash": "b0750b43b64c2b72dd68393fc2856e25",
+    "semantic_hash": ""
+  },
+  "public/images/hero-croissant.jpg": {
+    "mtime": 1788210320.3825064,
+    "seen": 1788261618.0329049,
+    "ast_hash": "13a35a48706030e1054237e6bbcefdb1",
+    "semantic_hash": ""
+  },
+  "public/images/kouign-amann.jpg": {
+    "mtime": 1788210320.462589,
+    "seen": 1788261618.032906,
+    "ast_hash": "3af3328e7bb5398d6800ec484bb32730",
+    "semantic_hash": ""
+  },
+  "public/next.svg": {
+    "mtime": 1788209718.5019977,
+    "seen": 1788261618.032908,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "public/vercel.svg": {
+    "mtime": 1788209718.5020418,
+    "seen": 1788261618.0329092,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "public/window.svg": {
+    "mtime": 1788209718.5020564,
+    "seen": 1788261618.03291,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  }
+}

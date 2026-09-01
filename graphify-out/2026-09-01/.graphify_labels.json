@@ -1,0 +1,20 @@
+{
+  "0": "page.tsx",
+  "1": "devDependencies",
+  "2": "compilerOptions",
+  "3": "Footer.tsx",
+  "4": "MenuFilter.tsx",
+  "5": "dependencies",
+  "6": "include",
+  "7": "layout.tsx",
+  "8": "README.md",
+  "9": "PackagingShowcase.tsx",
+  "10": "AGENTS.md",
+  "11": "eslint.config.mjs",
+  "12": "next.config.ts",
+  "13": "BakeryBanner.tsx",
+  "14": "MorningRituals.tsx",
+  "15": "image-loader.ts",
+  "16": "CLAUDE.md",
+  "17": "next"
+}
