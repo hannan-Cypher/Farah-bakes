@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import FarahLogo from "./FarahLogo";
 import styles from "./Navbar.module.css";
 
 interface NavbarProps {
@@ -13,7 +14,7 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -35,24 +36,23 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
         <a href="#" className={styles.logo}>
-          <div className={styles.logoIcon}>FB</div>
-          <div className={styles.logoTextGroup}>
-            <span className={styles.brandTitle}>FARAH BAKES</span>
-            <span className={styles.brandSubtitle}>ARTISANAL BAKERY</span>
-          </div>
+          <FarahLogo variant="secondary" height={32} goldColor="#D2AE6D" />
         </a>
 
         <div className={styles.navLinks}>
           <a href="#menu" className={styles.navLink}>
-            Featured Menu
+            Artisanal Menu
+          </a>
+          <a href="#rituals" className={styles.navLink}>
+            Morning Rituals
           </a>
           <a href="#packaging" className={styles.navLink}>
             Luxury Packaging
           </a>
           <a href="#story" className={styles.navLink}>
-            Our Story
+            Our Heritage
           </a>
-          <a href="#instagram" className={styles.navLink}>
+          <a href="#gallery" className={styles.navLink}>
             Gallery
           </a>
           <motion.button
@@ -85,6 +85,7 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
+            <FarahLogo variant="symbol" height={90} goldColor="#D2AE6D" />
             <motion.a
               href="#menu"
               className={styles.mobileLink}
@@ -93,7 +94,17 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
             >
-              Featured Menu
+              Artisanal Menu
+            </motion.a>
+            <motion.a
+              href="#rituals"
+              className={styles.mobileLink}
+              onClick={() => setMobileOpen(false)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              Morning Rituals
             </motion.a>
             <motion.a
               href="#packaging"
@@ -101,7 +112,7 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
+              transition={{ delay: 0.2 }}
             >
               Luxury Packaging
             </motion.a>
@@ -111,17 +122,17 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.25 }}
             >
-              Our Story
+              Our Heritage
             </motion.a>
             <motion.a
-              href="#instagram"
+              href="#gallery"
               className={styles.mobileLink}
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 }}
+              transition={{ delay: 0.3 }}
             >
               Gallery
             </motion.a>
@@ -133,7 +144,7 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
               }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.35 }}
             >
               Custom Order Request
             </motion.button>
@@ -143,4 +154,3 @@ export default function Navbar({ onOpenInquiry }: NavbarProps) {
     </>
   );
 }
-
