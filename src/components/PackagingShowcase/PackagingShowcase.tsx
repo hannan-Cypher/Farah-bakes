@@ -1,86 +1,80 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./PackagingShowcase.module.css";
 
-interface PackagingShowcaseProps {
+interface PackagingProps {
   onOpenInquiry?: () => void;
 }
 
-export default function PackagingShowcase({ onOpenInquiry }: PackagingShowcaseProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+export default function PackagingShowcase({ onOpenInquiry }: PackagingProps) {
+  const boxes = [
+    {
+      title: "The Signature Green Box",
+      tag: "LUXURY GIFTING",
+      desc: "Our iconic matte forest green box adorned with metallic gold foil monogram and hand-stamped wax emblem. Holds 6 to 12 gourmet bakes.",
+      image: "/images/farah-bakes/green-box-1.jpg",
+      price: "From $35",
+    },
+    {
+      title: "Celebration & Wedding Favors",
+      tag: "EVENT SPECIAL",
+      desc: "Bespoke individual favor boxes wrapped with silk ribbon and customized wax seals for high-end celebrations and royal weddings.",
+      image: "/images/farah-bakes/green-box-2.jpg",
+      price: "Custom Quote",
+    },
+    {
+      title: "Corporate & Royal Hampers",
+      tag: "VIP SELECTION",
+      desc: "Tiered luxury packaging featuring an assortment of signature cakes, pecan cookies, and custom greeting note cards.",
+      image: "/images/farah-bakes/packaging-stack.jpg",
+      price: "From $85",
+    },
+  ];
 
   return (
-    <section className={styles.section} id="packaging" ref={ref}>
+    <section className={styles.section} id="packaging">
       <div className="container">
+        <div className={styles.header}>
+          <span className={styles.subtitle}>ELEVATED UNBOXING EXPERIENCE</span>
+          <h2 className={styles.title}>Bespoke Luxury Packaging</h2>
+          <div className="gold-divider" />
+        </div>
+
         <div className={styles.grid}>
-          {/* Text Column */}
-          <motion.div
-            className={styles.textContent}
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className={styles.badge}>LUXURY GIFTING &amp; CATERING</span>
-            <h2 className={styles.title}>Gold-Stamped Packaging &amp; Custom Favor Boxes</h2>
-            <p className={styles.paragraph}>
-              Every Farah Bakes creation is delivered in our signature Brand Green (<code className={styles.codeColor}>#1F3732</code>) and Gold-embossed packaging. Designed to elevate weddings, corporate celebrations, and memorable gifts.
-            </p>
-
-            <ul className={styles.featureList}>
-              <li className={styles.featureItem}>
-                <span className={styles.goldCheck}>✓</span> Custom Gold Foil Monogramming Available
-              </li>
-              <li className={styles.featureItem}>
-                <span className={styles.goldCheck}>✓</span> Temperature-Controlled Insulated Gift Boxes
-              </li>
-              <li className={styles.featureItem}>
-                <span className={styles.goldCheck}>✓</span> Corporate Favors &amp; Multi-Recipient Delivery
-              </li>
-            </ul>
-
-            <motion.button
-              className="btn btn-gold"
-              onClick={onOpenInquiry}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+          {boxes.map((box, index) => (
+            <motion.div
+              key={index}
+              className={styles.card}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
             >
-              Order Corporate / Event Packaging
-            </motion.button>
-          </motion.div>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={box.image}
+                  alt={box.title}
+                  width={400}
+                  height={300}
+                  style={{ objectFit: "cover" }}
+                />
+                <span className={styles.cardTag}>{box.tag}</span>
+              </div>
 
-          {/* Image Showcase Grid */}
-          <motion.div
-            className={styles.visualGroup}
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className={`${styles.imageWrapper} ${styles.mainImg}`}>
-              <Image
-                src="/images/final/IMG_1510_copy.jpg"
-                alt="Farah Bakes luxury gold-stamped packaging box"
-                fill
-                sizes="(max-width: 968px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
-              <div className={styles.imgLabel}>Signature Gift Box</div>
-            </div>
-
-            <div className={`${styles.imageWrapper} ${styles.subImg}`}>
-              <Image
-                src="/images/final/IMG_1510.jpg"
-                alt="Farah Bakes deluxe gift tote presentation"
-                fill
-                sizes="(max-width: 968px) 50vw, 25vw"
-                style={{ objectFit: "cover" }}
-              />
-              <div className={styles.imgLabel}>Luxury Tote Bag</div>
-            </div>
-          </motion.div>
+              <div className={styles.cardBody}>
+                <h3 className={styles.cardTitle}>{box.title}</h3>
+                <p className={styles.cardDesc}>{box.desc}</p>
+                <div className={styles.cardFooter}>
+                  <span className={styles.cardPrice}>{box.price}</span>
+                  <button className={styles.actionBtn} onClick={onOpenInquiry}>
+                    Request Box &rarr;
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

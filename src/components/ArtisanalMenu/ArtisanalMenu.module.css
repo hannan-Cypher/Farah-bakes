@@ -1,89 +1,312 @@
 .section {
-  padding: var(--space-5xl) 0;
-  background:
-    linear-gradient(rgba(45, 24, 16, 0.92), rgba(45, 24, 16, 0.92)),
-    url('/images/bakery-workspace.jpg') center / cover no-repeat;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #161311;
+  perspective: 1200px;
 }
 
-.title {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: clamp(2rem, 4vw, 3rem);
-  text-align: center;
-  color: var(--color-gold);
-  margin-bottom: var(--space-3xl);
+/* 1. Full section background image */
+.bgImageWrap {
+  position: absolute;
+  top: -4%;
+  left: -2%;
+  right: -2%;
+  bottom: -4%;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
 }
 
-.grid {
-  max-width: var(--container-max);
+.bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* 2. Top-Right Organic Cream Wave */
+.topRightWaveWrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(260px, 34vw, 540px);
+  height: clamp(90px, 13vw, 180px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.topRightSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 3. Top-Left Organic Cream Wave & Gold Swirl */
+.topLeftWaveWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(300px, 42vw, 650px);
+  height: clamp(120px, 17vw, 240px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.topLeftSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 4. Top-Left Floating Wooden Sugar Spoon */
+.spoonWrap {
+  position: absolute;
+  top: clamp(35px, 7vw, 100px);
+  left: clamp(-35px, -1.5vw, 0px);
+  width: clamp(120px, 15vw, 195px);
+  height: clamp(120px, 15vw, 195px);
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
+  will-change: transform;
+}
+
+.spoonInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.spoonImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(-10deg);
+}
+
+/* 5. Top-Left Circular Cannelé Badge */
+.badgeWrap {
+  position: absolute;
+  top: clamp(55px, 9vw, 125px);
+  left: clamp(90px, 16vw, 230px);
+  width: clamp(125px, 16vw, 205px);
+  height: clamp(125px, 16vw, 205px);
+  z-index: 6;
+  pointer-events: auto;
+  will-change: transform;
+}
+
+.badgeRing {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 3.5px;
+  background: linear-gradient(135deg, #e5c78e 0%, #d4a86a 50%, #b8924f 100%);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(212, 168, 106, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.badgeWrap:hover .badgeRing {
+  transform: scale(1.04);
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.65),
+    0 0 32px rgba(212, 168, 106, 0.5);
+}
+
+.badgeImgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* 6. Floating Flour/Gold Dust Particles Canvas */
+.particlesCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* 7. Dark Semi-Transparent Curved Overlay */
+.overlaySection {
+  position: relative;
+  z-index: 8;
+  margin-top: clamp(230px, 31vw, 380px);
+  width: 100%;
+}
+
+/* Top Curve of the Dark Overlay */
+.curveHeader {
+  width: 100%;
+  height: clamp(55px, 7vw, 100px);
+  margin-bottom: -1px;
+  position: relative;
+  pointer-events: none;
+}
+
+.curveSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Menu Body: Semi-transparent dark background with soft blur */
+.menuBody {
+  background: rgba(22, 19, 17, 0.87);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.container {
+  max-width: 1060px;
   margin: 0 auto;
-  padding: 0 var(--space-xl);
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Header */
+.menuTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  color: #cca262;
+  text-align: center;
+  margin-top: 0.25rem;
+  margin-bottom: clamp(2rem, 3.5vw, 3.2rem);
+  letter-spacing: 0.5px;
+}
+
+/* 2-Column Grid Layout */
+.columnsWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-lg) var(--space-3xl);
+  column-gap: clamp(2rem, 5vw, 5rem);
+  row-gap: 0;
 }
 
-.item {
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Item Row */
+.menuRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid rgba(200, 169, 94, 0.15);
-  transition: all var(--transition-base);
+  gap: 1.25rem;
+  padding: clamp(0.95rem, 1.4vw, 1.25rem) 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  cursor: default;
+  transition: background 0.3s ease;
 }
 
-.item:hover {
-  padding-left: var(--space-md);
-  border-bottom-color: var(--color-gold);
+.menuRow:hover {
+  background: rgba(212, 168, 106, 0.05);
 }
 
-.itemInfo {
+.itemText {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .itemName {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   font-weight: 500;
-  color: var(--color-cream);
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .itemPrice {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 0.95vw, 0.92rem);
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
 }
 
-.itemImage {
-  width: 70px;
-  height: 70px;
-  border-radius: var(--radius-md);
+.thumbWrap {
+  width: clamp(56px, 5vw, 64px);
+  height: clamp(56px, 5vw, 64px);
+  border-radius: 6px;
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #25201c;
 }
 
-.itemImage img {
+.itemThumb {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-base);
+  display: block;
 }
 
-.item:hover .itemImage img {
-  transform: scale(1.1);
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
 }
 
-.btnWrapper {
-  text-align: center;
-  margin-top: var(--space-3xl);
+.viewAllBtn {
+  background-color: #c49a5b;
+  color: #1e1610;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px 36px;
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(196, 154, 91, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.viewAllBtn:hover {
+  background-color: #d2a969;
+  box-shadow: 0 8px 26px rgba(196, 154, 91, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .grid {
+  .columnsWrapper {
     grid-template-columns: 1fr;
-    gap: var(--space-sm);
+    column-gap: 0;
+  }
+
+  .badgeWrap {
+    left: 80px;
+    top: 45px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .spoonWrap {
+    width: 110px;
+    height: 110px;
+    top: 30px;
+    left: -25px;
+  }
+
+  .overlaySection {
+    margin-top: 200px;
+  }
+
+  .container {
+    padding: 0 1.25rem;
   }
 }

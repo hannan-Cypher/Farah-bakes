@@ -3,52 +3,51 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
-import MenuFilter, { ProductItem } from "@/components/MenuFilter/MenuFilter";
-import PackagingShowcase from "@/components/PackagingShowcase/PackagingShowcase";
+import FeaturedItems from "@/components/FeaturedItems/FeaturedItems";
+import ArtisanalMenu from "@/components/ArtisanalMenu/ArtisanalMenu";
 import HowItStarted from "@/components/HowItStarted/HowItStarted";
 import Values from "@/components/Values/Values";
-import BakeryBanner from "@/components/BakeryBanner/BakeryBanner";
+import Promotions from "@/components/Promotions/Promotions";
 import InstagramFeed from "@/components/InstagramFeed/InstagramFeed";
 import Footer from "@/components/Footer/Footer";
-import QuickViewModal from "@/components/QuickViewModal/QuickViewModal";
-import OrderInquiryModal from "@/components/OrderInquiryModal/OrderInquiryModal";
+import CustomOrderModal from "@/components/CustomOrderModal/CustomOrderModal";
 
 export default function Home() {
-  const [selectedQuickViewProduct, setSelectedQuickViewProduct] = useState<ProductItem | null>(null);
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const [selectedInquiryProduct, setSelectedInquiryProduct] = useState<ProductItem | null>(null);
-
-  const handleOpenInquiry = (product?: ProductItem | null) => {
-    setSelectedInquiryProduct(product || null);
-    setIsInquiryOpen(true);
-  };
+  const openInquiry = () => setIsInquiryOpen(true);
+  const closeInquiry = () => setIsInquiryOpen(false);
 
   return (
     <main>
-      <Navbar onOpenInquiry={() => handleOpenInquiry()} />
-      <Hero onOpenInquiry={() => handleOpenInquiry()} />
-      <MenuFilter onSelectProduct={(product) => setSelectedQuickViewProduct(product)} />
-      <PackagingShowcase onOpenInquiry={() => handleOpenInquiry()} />
-      <HowItStarted onOpenInquiry={() => handleOpenInquiry()} />
+      {/* 1. Navigation */}
+      <Navbar onOpenInquiry={openInquiry} />
+
+      {/* 2. Hero — dark green, circular image, wave bottom */}
+      <Hero onOpenInquiry={openInquiry} />
+
+      {/* 3. Featured Items — horizontal scroll cards */}
+      <FeaturedItems onOpenInquiry={openInquiry} />
+
+      {/* 4. Artisanal Menu — dark section with diagonal banner + 2-col list */}
+      <ArtisanalMenu onOpenInquiry={openInquiry} />
+
+      {/* 5. How It Started — 3-col story section */}
+      <HowItStarted onOpenInquiry={openInquiry} />
+
+      {/* 6. Values — 3 icon columns */}
       <Values />
-      <BakeryBanner />
+
+      {/* 7. Promotions — 2 side-by-side sale cards */}
+      <Promotions onOpenInquiry={openInquiry} />
+
+      {/* 8. Instagram Feed — 5-image grid */}
       <InstagramFeed />
-      <Footer onOpenInquiry={() => handleOpenInquiry()} />
 
-      {/* Quick View Product Modal */}
-      <QuickViewModal
-        product={selectedQuickViewProduct}
-        onClose={() => setSelectedQuickViewProduct(null)}
-        onOrderProduct={(prod) => handleOpenInquiry(prod)}
-      />
+      {/* 9. Footer — dark, wave, newsletter, links */}
+      <Footer onOpenInquiry={openInquiry} />
 
-      {/* Slide-over Custom Order Inquiry Drawer */}
-      <OrderInquiryModal
-        isOpen={isInquiryOpen}
-        onClose={() => setIsInquiryOpen(false)}
-        selectedProduct={selectedInquiryProduct}
-      />
+      {/* Order Modal */}
+      <CustomOrderModal isOpen={isInquiryOpen} onClose={closeInquiry} />
     </main>
   );
 }
-

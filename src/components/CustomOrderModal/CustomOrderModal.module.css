@@ -1,0 +1,176 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 18, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  background: var(--color-brand-green);
+  border: 1px solid var(--color-brand-gold);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  color: var(--color-white);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  padding: 1.75rem 2rem 1.25rem;
+  border-bottom: 1px solid rgba(210, 174, 109, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--color-brand-gold);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2px;
+}
+
+.closeBtn {
+  color: var(--color-brand-gold);
+  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background: rgba(210, 174, 109, 0.15);
+}
+
+.stepBar {
+  display: flex;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stepProgress {
+  height: 100%;
+  background: var(--color-brand-gold);
+  transition: width var(--transition-base);
+}
+
+.body {
+  padding: 2rem;
+  min-height: 280px;
+}
+
+.stepTitle {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.optionCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(210, 174, 109, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.optionCard:hover {
+  background: rgba(210, 174, 109, 0.1);
+  border-color: var(--color-brand-gold);
+}
+
+.optionCardSelected {
+  background: rgba(210, 174, 109, 0.2) !important;
+  border-color: var(--color-brand-gold) !important;
+  box-shadow: 0 0 15px rgba(210, 174, 109, 0.2);
+}
+
+.optionName {
+  font-weight: 600;
+  color: var(--color-gold-light);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.optionDesc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-gold-light);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input, .textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(210, 174, 109, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--color-white);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--color-brand-gold);
+  outline: none;
+}
+
+.footer {
+  padding: 1.25rem 2rem 1.75rem;
+  border-top: 1px solid rgba(210, 174, 109, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.successState {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(210, 174, 109, 0.2);
+  border: 2px solid var(--color-brand-gold);
+  color: var(--color-brand-gold);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
